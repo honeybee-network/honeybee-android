@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources tools:ignore="MissingTranslation" xmlns:tools="http://schemas.android.com/tools">
 
-    <color name="primary_color">#42b6e7</color>
-    <color name="primary_dark_color">#3aadda</color>
+    <color name="primary_color">#6A63BA</color>
+    <color name="primary_dark_color">#5b55a4</color>
     <color name="translucent_cover">#6000</color>
     <color name="window_background">#eeeeee</color>
     <color name="light_window_background">#eeeeee</color>
     <color name="white_window_background">#fafafa</color>
     <color name="yellow">#ebce2c</color>
+    <color name="light_green">#4ffff2</color>
 
     <color name="highlight">#ec2248</color>
     <color name="light_gray">#e8e8e8</color>

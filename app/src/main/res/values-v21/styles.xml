@@ -4,7 +4,7 @@
         <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
                 <item name="colorPrimary">@color/primary_color</item>
                 <item name="colorPrimaryDark">@color/primary_dark_color</item>
-                <item name="colorAccent">#287ca0</item>
+                <item name="colorAccent">@color/light_green</item>
                 <item name="searchViewStyle">@style/AppTheme.SearchView</item>
                 <item name="android:windowBackground">@color/window_background</item>
                 <item name="android:buttonStyle">@style/AppTheme.Button</item>
