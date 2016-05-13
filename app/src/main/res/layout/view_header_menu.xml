@@ -4,9 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="180dp"
-    android:minHeight="180dp"
+    android:layout_height="160dp"
+    android:minHeight="160dp"
     android:background="?attr/colorPrimary">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_gradient_background"
+        android:layout_alignParentBottom="true"/>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/picture"
@@ -58,22 +64,5 @@
         android:layout_marginStart="10dp"
         android:textColor="@android:color/white"
         tools:text="Stories: 30"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/shape_gradient_background"
-        android:layout_alignParentBottom="true"/>
-
-    <Spinner
-        android:id="@+id/countryPrograms"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp"
-        style="@style/Widget.AppCompat.Spinner" />
 
 </RelativeLayout>

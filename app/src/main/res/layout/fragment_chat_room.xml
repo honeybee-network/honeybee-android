@@ -105,8 +105,8 @@
 
         <ImageButton
             android:id="@+id/send"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
@@ -115,19 +115,19 @@
             android:src="@drawable/ic_send_white_24dp"
             android:background="@drawable/shape_highlight"
             android:visibility="gone"
-            tools:visibility="visible"/>
+            tools:visibility="gone"/>
 
         <ImageView
             android:id="@+id/record"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:padding="10dp"
+            android:padding="5dp"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_marginRight="10dp"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/ic_mic_blue"
+            android:src="@drawable/microphone"
             android:visibility="visible" />
 
     </RelativeLayout>

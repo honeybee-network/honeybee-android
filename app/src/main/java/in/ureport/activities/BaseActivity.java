@@ -26,17 +26,14 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -46,7 +43,6 @@ import in.ureport.managers.CountryProgramManager;
 import in.ureport.helpers.ImageLoader;
 import in.ureport.managers.DonationManager;
 import in.ureport.managers.PrototypeManager;
-import in.ureport.helpers.SpinnerColorSwitcher;
 import in.ureport.managers.UserManager;
 import in.ureport.models.CountryProgram;
 import in.ureport.models.Notification;
@@ -70,7 +66,6 @@ public abstract class BaseActivity extends AppCompatActivity implements LoaderMa
     private DrawerLayout drawerLayout;
 
     private RecyclerView notificationsList;
-    private Spinner countryPrograms;
 
     private User user;
     private List<Notification> notificationAlerts;
@@ -212,16 +207,6 @@ public abstract class BaseActivity extends AppCompatActivity implements LoaderMa
             TextView stories = (TextView) menuHeader.findViewById(R.id.stories);
             stories.setText(getString(R.string.profile_stories, getIntegerValue(user.getStories())));
 
-            List<CountryProgram> countryProgramList = new ArrayList<>(CountryProgramManager.getAvailableCountryPrograms());
-
-            countryPrograms = (Spinner) menuHeader.findViewById(R.id.countryPrograms);
-            countryPrograms.setAdapter(getCountryProgramsAdapter(countryProgramList));
-            countryPrograms.setTag(R.id.country_program_position, 0);
-            countryPrograms.setOnItemSelectedListener(onCountryProgramClickListener);
-
-            SpinnerColorSwitcher spinnerColorSwitcher = new SpinnerColorSwitcher(this);
-            spinnerColorSwitcher.switchToColor(countryPrograms, android.R.color.white);
-
             CoordinatorLayout coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
             coordinatorLayout.setOnTouchListener(onCoordinatorLayoutTouchListener);
 
@@ -346,34 +331,11 @@ public abstract class BaseActivity extends AppCompatActivity implements LoaderMa
         }
     };
 
-    private void restartActivity() {
-        Intent mainIntent = new Intent(BaseActivity.this, getClass());
-        startActivity(mainIntent);
-        finish();
-    }
-
     private View.OnTouchListener onCoordinatorLayoutTouchListener = new View.OnTouchListener() {
         @Override
         public boolean onTouch(View view, MotionEvent event) {
             return true;
         }
-    };
-
-    private AdapterView.OnItemSelectedListener onCountryProgramClickListener = new AdapterView.OnItemSelectedListener() {
-        @Override
-        public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-            Object tag = countryPrograms.getTag(R.id.country_program_position);
-            if(tag != null && !tag.equals(position) && position > 0) {
-                view.setTag(R.id.country_program_position, position);
-
-                CountryProgram countryProgram = (CountryProgram) adapterView.getAdapter().getItem(position);
-                CountryProgramManager.switchCountryProgram(countryProgram);
-                restartActivity();
-            }
-        }
-
-        @Override
-        public void onNothingSelected(AdapterView<?> adapterView) {}
     };
 
     protected void onNotificationsLoaded(List<Notification> notifications) {}
