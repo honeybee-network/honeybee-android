@@ -1,6 +1,7 @@
 package in.ureport.activities;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -24,6 +25,7 @@ import in.ureport.flowrunner.models.Contact;
 import in.ureport.network.UserServices;
 import in.ureport.services.GcmRegistrationIntentService;
 import in.ureport.tasks.SaveContactTask;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
  * Created by johncordeiro on 7/7/15.
@@ -41,6 +43,11 @@ public class LoginActivity extends AppCompatActivity implements LoginFragment.Lo
             addLoginFragment();
         }
         checkVersionAndProceed();
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     private void checkVersionAndProceed() {
