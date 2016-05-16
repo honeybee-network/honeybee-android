@@ -68,7 +68,7 @@
   <string name="confirm_neutral_dialog_button">Ок</string>
   <string name="answer_poll_greetings_title">Вітаємо!</string>
   <string name="answer_poll_greeting_message">Дякуємо Вам за участь в цьому опитуванні, результати будуть доступні найближчим часом.</string>
-  <string name="label_poll_results">Всі результати</string>
+  <string name="label_poll_results">Детальніше</string>
   <string name="label_poll_region_results">Результат по регіонах</string>
   <string name="poll_results_by_region">Дивитись результати по регіонах</string>
   <string name="menu_notifications_title">Повідомлення</string>

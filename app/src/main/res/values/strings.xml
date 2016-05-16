@@ -73,7 +73,7 @@
     <string name="confirm_neutral_dialog_button">Ok</string>
     <string name="answer_poll_greetings_title">Congratulations!</string>
     <string name="answer_poll_greeting_message">Thank you for participating in this poll, the outcomes will be available soon.</string>
-    <string name="label_poll_results">All results</string>
+    <string name="label_poll_results">More details</string>
     <string name="label_poll_region_results">Result by Region</string>
     <string name="poll_results_by_region">See results by region</string>
     <string name="menu_notifications_title">Notifications</string>
@@ -348,6 +348,12 @@
     <string name="title_comment">Comment</string>
     <string name="title_comment_poll">Be the first to comment this poll</string>
     <string name="poll_comment">Add a comment</string>
+    <string name="label_challenge_results">Results</string>
+    <string name="label_challenge">Challenge</string>
+    <string name="label_issue">Problem/Issue</string>
+    <string name="label_need">Need</string>
+    <string name="label_outcome">Expected Outcome</string>
+    <string name="label_challenge_area">Area: %1$s</string>
 
     <plurals name="files_attached">
         <item quantity="one">%1$s file attached</item>

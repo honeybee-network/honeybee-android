@@ -4,6 +4,8 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
 /**
  * Created by johncordeiro on 7/16/15.
@@ -26,6 +28,13 @@ public class Poll implements Parcelable {
     private String responded;
 
     private String polled;
+
+    private String issue;
+
+    private String need;
+
+    @JsonProperty("expected_outcome")
+    private String expectedOutcome;
 
     public String getKey() {
         return key;
@@ -91,6 +100,30 @@ public class Poll implements Parcelable {
         this.polled = polled;
     }
 
+    public String getIssue() {
+        return issue;
+    }
+
+    public void setIssue(String issue) {
+        this.issue = issue;
+    }
+
+    public String getNeed() {
+        return need;
+    }
+
+    public void setNeed(String need) {
+        this.need = need;
+    }
+
+    public String getExpectedOutcome() {
+        return expectedOutcome;
+    }
+
+    public void setExpectedOutcome(String expectedOutcome) {
+        this.expectedOutcome = expectedOutcome;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -106,6 +139,9 @@ public class Poll implements Parcelable {
         dest.writeString(this.percent_rate);
         dest.writeString(this.responded);
         dest.writeString(this.polled);
+        dest.writeString(this.issue);
+        dest.writeString(this.need);
+        dest.writeString(this.expectedOutcome);
     }
 
     public Poll() {
@@ -120,6 +156,9 @@ public class Poll implements Parcelable {
         this.percent_rate = in.readString();
         this.responded = in.readString();
         this.polled = in.readString();
+        this.issue = in.readString();
+        this.need = in.readString();
+        this.expectedOutcome = in.readString();
     }
 
     public static final Creator<Poll> CREATOR = new Creator<Poll>() {

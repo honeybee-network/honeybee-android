@@ -68,7 +68,7 @@
   <string name="confirm_neutral_dialog_button">Ok</string>
   <string name="answer_poll_greetings_title">Parabéns!</string>
   <string name="answer_poll_greeting_message">Obrigado por participar dessa enquete, os resultados estarão disponíveis em breve</string>
-  <string name="label_poll_results">Todos os resultados</string>
+  <string name="label_poll_results">Mais detalhes</string>
   <string name="label_poll_region_results">Resultado por Região</string>
   <string name="poll_results_by_region">Veja os resultados por região</string>
   <string name="menu_notifications_title">Notificações</string>
