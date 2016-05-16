@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:showIn="@layout/fragment_challenge_info">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:drawableRight="@drawable/ic_chevron_right"
+        android:drawableEnd="@drawable/ic_chevron_right"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        tools:text="Problem/Issue" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="15dp"
+        android:visibility="gone"
+        android:paddingTop="5dp"
+        tools:visibility="visible"
+        tools:text="Window-based OS is expensive and all office software's are also expensive. In many cases it is crossing cost of PC. Further these are highly susceptible to virus, which increases expenses for antivirus software also. Therefore when one wants to scale up (i.e. to install many PCs) it becomes non affordable" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_strong" />
+
+</LinearLayout>

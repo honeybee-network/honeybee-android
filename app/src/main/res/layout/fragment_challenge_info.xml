@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            tools:text="Use of Linux based Network and Open Office" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_strong"/>
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold"
+            tools:text="Area: Operating System for Computer and Office Applications" />
+
+        <include
+            android:id="@+id/issue"
+            layout="@layout/view_challenge_details_line" />
+
+        <include
+            android:id="@+id/need"
+            layout="@layout/view_challenge_details_line" />
+
+        <include
+            android:id="@+id/outcome"
+            layout="@layout/view_challenge_details_line" />
+
+    </LinearLayout>
+</ScrollView>
