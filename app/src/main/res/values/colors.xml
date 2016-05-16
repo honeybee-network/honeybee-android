@@ -9,6 +9,7 @@
     <color name="white_window_background">#fafafa</color>
     <color name="yellow">#ebce2c</color>
     <color name="light_green">#4ffff2</color>
+    <color name="bright_green">#50e3c2</color>
 
     <color name="highlight">#ec2248</color>
     <color name="light_gray">#e8e8e8</color>

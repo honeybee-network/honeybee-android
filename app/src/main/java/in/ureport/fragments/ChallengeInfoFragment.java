@@ -1,24 +1,48 @@
 package in.ureport.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+
+import java.util.Collections;
+import java.util.Date;
+
 import in.ureport.R;
+import in.ureport.activities.ChatRoomActivity;
+import in.ureport.helpers.ValueEventListenerAdapter;
+import in.ureport.managers.UserManager;
+import in.ureport.models.GroupChatRoom;
 import in.ureport.models.Poll;
+import in.ureport.models.User;
+import in.ureport.network.ChatRoomServices;
+import in.ureport.network.PollServices;
+import in.ureport.network.UserServices;
 
 /**
  * Created by john-mac on 5/16/16.
  */
 public class ChallengeInfoFragment extends Fragment {
 
+    private static final String TAG = "ChallengeInfoFragment";
+
     public static final String EXTRA_POLL = "poll";
 
     private Poll poll;
+
+    private UserServices userServices;
+    private ChatRoomServices chatRoomServices;
+    private PollServices pollServices;
 
     public static ChallengeInfoFragment newInstance(Poll poll) {
         Bundle args = new Bundle();
@@ -40,7 +64,14 @@ public class ChallengeInfoFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         poll = getArguments().getParcelable(EXTRA_POLL);
 
+        setupObjects();
         setupView(view);
+    }
+
+    private void setupObjects() {
+        userServices = new UserServices();
+        chatRoomServices = new ChatRoomServices();
+        pollServices = new PollServices();
     }
 
     private void setupView(View view) {
@@ -58,6 +89,9 @@ public class ChallengeInfoFragment extends Fragment {
 
         View outcome = view.findViewById(R.id.outcome);
         setupChallengeDetailRow(outcome, getString(R.string.label_outcome), poll.getExpectedOutcome(), false);
+
+        Button enterChat = (Button) view.findViewById(R.id.enterChat);
+        enterChat.setOnClickListener(onEnterChatClickListener);
     }
 
     private void setupChallengeDetailRow(View issue, String title, String content, boolean enabled) {
@@ -82,4 +116,55 @@ public class ChallengeInfoFragment extends Fragment {
             rowTitle.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_chevron_right, 0);
         }
     }
+
+    private View.OnClickListener onEnterChatClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            if (poll.getChatRoom() != null) {
+                getUserAddingAsMember();
+            } else {
+                createGroupChatRoom();
+            }
+        }
+    };
+
+    private void createGroupChatRoom() {
+        GroupChatRoom groupChatRoom = new GroupChatRoom();
+        groupChatRoom.setCreatedDate(new Date());
+        groupChatRoom.setTitle(poll.getTitle());
+        groupChatRoom.setSubject(poll.getIssue());
+        groupChatRoom.setPrivateAccess(false);
+        groupChatRoom.setMediaAllowed(true);
+
+        userServices.getUser(UserManager.getUserId(), new ValueEventListenerAdapter() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                super.onDataChange(dataSnapshot);
+                User me = dataSnapshot.getValue(User.class);
+                chatRoomServices.saveGroupChatRoom(getActivity(), null, groupChatRoom, Collections.singletonList(me)
+                        , (chatRoom, chatMembers) -> pollServices.updatePollChatRoom(poll, chatRoom.getKey(), onCompletionListener));
+            }
+        });
+    }
+
+    private void getUserAddingAsMember() {
+        userServices.getUser(UserManager.getUserId(), new ValueEventListenerAdapter() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                super.onDataChange(dataSnapshot);
+
+                User me = dataSnapshot.getValue(User.class);
+                chatRoomServices.addChatMember(getContext(), me, poll.getChatRoom(), onCompletionListener);
+            }
+        });
+    }
+
+    private Firebase.CompletionListener onCompletionListener = new Firebase.CompletionListener() {
+        @Override
+        public void onComplete(FirebaseError firebaseError, Firebase firebase) {
+            Intent chatRoomIntent = new Intent(getActivity(), ChatRoomActivity.class);
+            chatRoomIntent.putExtra(ChatRoomActivity.EXTRA_CHAT_ROOM_KEY, poll.getChatRoom());
+            startActivity(chatRoomIntent);
+        }
+    };
 }

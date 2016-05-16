@@ -228,9 +228,11 @@ public class ChatRoomServices extends ProgramServices {
 
     public void saveGroupChatRoom(final Context context, final User administrator, final GroupChatRoom groupChatRoom
             , final List<User> members, final ChatRoomInterface.OnChatRoomSavedListener onChatRoomSavedListener) {
-        User administratorWithKey = new User();
-        administratorWithKey.setKey(administrator.getKey());
-        groupChatRoom.setAdministrator(administrator);
+        if(administrator != null) {
+            User administratorWithKey = new User();
+            administratorWithKey.setKey(administrator.getKey());
+            groupChatRoom.setAdministrator(administrator);
+        }
 
         getDefaultRoot().child(chatRoomPath).push().setValue(groupChatRoom
                 , new Firebase.CompletionListener() {
@@ -238,7 +240,7 @@ public class ChatRoomServices extends ProgramServices {
             public void onComplete(FirebaseError firebaseError, Firebase firebase) {
                 Log.i(TAG, "onComplete firebaseError: " + firebaseError);
                 if (firebaseError == null) {
-                    members.add(administrator);
+                    if(administrator != null) members.add(administrator);
                     for (User member : members) {
                         addChatMember(context, member, firebase.getKey());
                     }
@@ -301,15 +303,23 @@ public class ChatRoomServices extends ProgramServices {
     }
 
     public void addChatMember(Context context, User user, String chatRoomKey) {
+        addChatMember(context, user, chatRoomKey, null);
+    }
+
+    public void addChatMember(Context context, User user, String chatRoomKey, Firebase.CompletionListener listener) {
         UserServices userServices = new UserServices();
         userServices.addUserChatRoom(user.getKey(), chatRoomKey);
 
         GcmTopicManager gcmTopicManager = new GcmTopicManager(context);
         gcmTopicManager.registerToChatRoomTopic(user, chatRoomKey);
 
-        getRootByCode(user.getCountryProgram()).child(membersPath)
+        Firebase operation = getRootByCode(user.getCountryProgram()).child(membersPath)
                 .child(chatRoomKey)
-                .child(user.getKey())
-                .setValue(true);
+                .child(user.getKey());
+        if(listener != null) {
+            operation.setValue(true, listener);
+        } else {
+            operation.setValue(true);
+        }
     }
 }

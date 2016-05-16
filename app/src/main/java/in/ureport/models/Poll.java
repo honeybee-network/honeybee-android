@@ -25,6 +25,9 @@ public class Poll implements Parcelable {
 
     private String percent_rate;
 
+    @JsonProperty("chat_room")
+    private String chatRoom;
+
     private String responded;
 
     private String polled;
@@ -84,6 +87,14 @@ public class Poll implements Parcelable {
         this.percent_rate = percent_rate;
     }
 
+    public String getChatRoom() {
+        return chatRoom;
+    }
+
+    public void setChatRoom(String chatRoom) {
+        this.chatRoom = chatRoom;
+    }
+
     public String getResponded() {
         return responded;
     }
@@ -137,6 +148,7 @@ public class Poll implements Parcelable {
         dest.writeString(this.expiration_date);
         dest.writeParcelable(this.category, 0);
         dest.writeString(this.percent_rate);
+        dest.writeString(this.chatRoom);
         dest.writeString(this.responded);
         dest.writeString(this.polled);
         dest.writeString(this.issue);
@@ -154,6 +166,7 @@ public class Poll implements Parcelable {
         this.expiration_date = in.readString();
         this.category = in.readParcelable(PollCategory.class.getClassLoader());
         this.percent_rate = in.readString();
+        this.chatRoom = in.readString();
         this.responded = in.readString();
         this.polled = in.readString();
         this.issue = in.readString();

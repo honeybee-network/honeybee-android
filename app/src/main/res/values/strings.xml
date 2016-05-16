@@ -354,6 +354,9 @@
     <string name="label_need">Need</string>
     <string name="label_outcome">Expected Outcome</string>
     <string name="label_challenge_area">Area: %1$s</string>
+    <string name="title_discussion_group">Discussion Group</string>
+    <string name="label_enter">Enter</string>
+    <string name="message_discussion_group">See what users are saying about this challenge</string>
 
     <plurals name="files_attached">
         <item quantity="one">%1$s file attached</item>

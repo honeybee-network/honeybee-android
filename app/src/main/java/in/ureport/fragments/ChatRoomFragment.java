@@ -294,7 +294,7 @@ public class ChatRoomFragment extends Fragment
 
     private boolean isCurrentUserAdministrator() {
         GroupChatRoom groupChatRoom = (GroupChatRoom)chatRoom;
-        return groupChatRoom.getAdministrator().getKey().equals(UserManager.getUserId());
+        return groupChatRoom.getAdministrator() != null && groupChatRoom.getAdministrator().getKey().equals(UserManager.getUserId());
     }
 
     @Override

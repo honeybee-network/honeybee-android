@@ -38,4 +38,10 @@ public class PollServices extends ProgramServices {
         return getDefaultRoot().child(pollResultPath).child(poll.getKey());
     }
 
+    public void updatePollChatRoom(Poll poll, String chatRoomKey, Firebase.CompletionListener listener) {
+        poll.setChatRoom(chatRoomKey);
+        getDefaultRoot().child(pollPath).child(poll.getKey())
+                .child("chat_room").setValue(chatRoomKey, listener);
+    }
+
 }

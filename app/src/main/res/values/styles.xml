@@ -94,6 +94,12 @@
         <item name="colorButtonNormal">@color/light_green_highlight</item>
     </style>
 
+    <style name="LightGreenButton" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="colorControlHighlight">@color/bright_green</item>
+        <item name="colorButtonNormal">@color/bright_green</item>
+    </style>
+
     <style name="StoryTitle">
         <item name="android:maxLines">2</item>
         <item name="android:gravity">start|bottom</item>

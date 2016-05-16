@@ -175,21 +175,23 @@ public class GroupInfoFragment extends Fragment {
     }
 
     private void loadAdministratorInfo() {
-        UserServices userServices = new UserServices();
-        userServices.getUser(chatRoom.getAdministrator().getKey(), new ValueEventListenerAdapter() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                super.onDataChange(dataSnapshot);
+        if (chatRoom.getAdministrator() != null) {
+            UserServices userServices = new UserServices();
+            userServices.getUser(chatRoom.getAdministrator().getKey(), new ValueEventListenerAdapter() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    super.onDataChange(dataSnapshot);
 
-                if (dataSnapshot.exists()) {
-                    User administrator = dataSnapshot.getValue(User.class);
-                    DateFormat dateFormatter = DateFormat.getDateInstance(DateFormat.SHORT);
-                    String creationDate = dateFormatter.format(chatRoom.getCreatedDate());
+                    if (dataSnapshot.exists()) {
+                        User administrator = dataSnapshot.getValue(User.class);
+                        DateFormat dateFormatter = DateFormat.getDateInstance(DateFormat.SHORT);
+                        String creationDate = dateFormatter.format(chatRoom.getCreatedDate());
 
-                    date.setText(getString(R.string.chat_group_info_created_date, administrator.getNickname(), creationDate));
+                        date.setText(getString(R.string.chat_group_info_created_date, administrator.getNickname(), creationDate));
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 
     private View.OnClickListener onAddUreporterClickListener = new View.OnClickListener() {
@@ -201,7 +203,7 @@ public class GroupInfoFragment extends Fragment {
     };
 
     private boolean isGroupModerator() {
-        return chatRoom.getAdministrator().getKey().equals(UserManager.getUserId())
+        return chatRoom.getAdministrator() != null && chatRoom.getAdministrator().getKey().equals(UserManager.getUserId())
             || UserManager.canModerate();
     }
 
