@@ -90,17 +90,17 @@
   <string name="chat_invite">Запросити</string>
   <string name="label_new_chat">Новий чат</string>
   <string name="chat_create_group_title">Створити групу</string>
-  <string name="chat_ureporters">U-репортери</string>
+  <string name="chat_ureporters">користувачі</string>
   <string name="chat_group_title_hint">Назва групи</string>
   <string name="chat_private_group_title">Приватна група</string>
-  <string name="chat_new_invite_ureporters">Пошук U-репортерів</string>
-  <string name="chat_new_invite_ureporters_count">%1$s U-репортерів</string>
+  <string name="chat_new_invite_ureporters">Пошук користувачі</string>
+  <string name="chat_new_invite_ureporters_count">%1$s користувачі</string>
   <string name="label_save">Зберегти</string>
   <string name="chat_create_result_title">Успіх!</string>
   <string name="chat_create_group_result_message">Група створена успішно!</string>
   <string name="chat_group_description_hint">Опис</string>
   <string name="label_create_group">Створити групу</string>
-  <string name="chat_create_individual_message">Бажаєте створити новий чат з цим U-репортером?</string>
+  <string name="chat_create_individual_message">Бажаєте створити новий чат з цим користувачі?</string>
   <string name="error_chat_create_individual">У вас вже є чат з цим користувачем. </string>
   <string name="cancel_dialog_button">Скасувати</string>
   <string name="label_action_notifications">Повідомлення</string>
@@ -129,7 +129,7 @@
   <string name="list_stories_header_title">Привіт %1$s, Поділіться своїми думками</string>
   <string name="main_menu_group_institutional">Установлений</string>
   <string name="label_settings">Налаштування</string>
-  <string name="group_info_add_ureporter">Додати U-репортера</string>
+  <string name="group_info_add_ureporter">Додати користувачі</string>
   <string name="label_group_information">Довідка</string>
   <string name="country_program_validation_error">Ви не можете зробити цю дію у рамках програми Вашої країни</string>
   <string name="label_group_edit">Змінити групу</string>
@@ -173,7 +173,7 @@
   <!--TODO: Remove or change this placeholder text-->
   <string name="load_message_save_user">Збереження профілю...</string>
   <string name="error_no_internet">Будь ласка, підключіться до Інтернету.</string>
-  <string name="invite_contact_text">Давай спілкуватись у додатку U-Report. Завантажуй тут http://goo.gl/Xxyodt</string>
+  <string name="invite_contact_text">Давай спілкуватись у додатку Honeybee Network. Завантажуй тут http://goo.gl/Xxyodt</string>
   <string name="ureporters_selected_maximum">Максимальна кількість обраних користувачів, складає %1$s</string>
   <string name="chat_private_media_permission_title">Медіа дозволено</string>
   <string name="search_title">Пошук</string>
@@ -188,7 +188,7 @@
   <string name="error_choose_district">Виберіть район!</string>
   <string name="error_rapidpro">Сталася помилка під час процесу реєстрації. Спробуйте ще раз пізніше.</string>
   <string name="load_message_user_data">Завантаження даних користувача...</string>
-  <string name="summary_notification">U-Report</string>
+  <string name="summary_notification">Honeybee Network</string>
   <string name="hint_search_groups">Пошук групи</string>
   <string name="hint_search_chat_rooms">Пошук чату</string>
   <string name="label_close_group">Закрита група</string>
@@ -219,7 +219,7 @@
   <string name="poll_question_default_message">Чекайте наступного опитування або надішліть повідомлення для U-Report нижче</string>
   <string name="main_chat">Чат</string>
   <string name="title_open_groups">Приєднуйтесь до груп</string>
-  <string name="description_open_groups">Дивитись, що Ю-Репорт спільнота обговорює</string>
+  <string name="description_open_groups">Дивитись, що Honeybee Network спільнота обговорює</string>
   <string name="title_see">Дивитись</string>
   <string name="label_invite_contacts">Запросити контакти</string>
   <string name="title_poll_question_no_login">Увійдіть у свій обліковий запис, щоб відповісти на опитування</string>
@@ -231,14 +231,14 @@
   <string name="button_title_disapprove">відхиляти</string>
   <string name="button_title_publish">Опублікувати</string>
   <string name="success_story_update_message">Історію була оновлено успішно!</string>
-  <string name="message_story_publish_warning">Ваша історія була передана команді Ю-Репорт. Перевірте пізніше її публікацію!</string>
+  <string name="message_story_publish_warning">Ваша історія була передана команді Honeybee Network. Перевірте пізніше її публікацію!</string>
   <string name="label_remove">Видалити</string>
   <string name="error_remove">Сталася помилка під час процесу видалення</string>
   <string name="message_success_remove">Дані видалені успішно!</string>
   <string name="title_share_story">Історія надана:</string>
   <string name="title_share_news">Новини надані:</string>
-  <string name="title_share_subject">Історія надана Ю-Репорт</string>
-  <string name="story_share_info">Завантажити додаток U-Report: http://goo.gl/Xxyodt</string>
+  <string name="title_share_subject">Історія надана Honeybee Network</string>
+  <string name="story_share_info">Завантажити додаток Honeybee Network: http://goo.gl/Xxyodt</string>
   <string name="label_country_moderator">Країна модератор</string>
   <string name="message_success_user_update">Користувач був оновлений успішно!</string>
   <string-array name="spinner_loading"/>
@@ -254,7 +254,7 @@
     <item quantity="other">%1$s нових повдомлень</item>
   </plurals>
   <string-array name="chat_message_items"/>
-  <string name="ureport_message_title">повідомлення Ю-Репорт</string>
+  <string name="ureport_message_title">повідомлення Honeybee Network</string>
   <string name="message_remove_chat_message">Ви дійсно бажаєте видалити це повідомлення?</string>
   <string name="message_delete_message_success">Ваше повідомлення було видалено успішно!</string>
   <string name="message_individual_chat_blocked">Цей чат був заблокований %1$s</string>
@@ -272,7 +272,7 @@
   <string name="label_chat_picture_notification">зображення</string>
   <string name="get_started_title">Почати</string>
   <string name="ureport_contribution_notification_title">Новий вклад в історію</string>
-  <string name="title_tutorial">Після того як ви зареєструвалися, ставши U-Репортером, ви маєте можливість:</string>
+  <string name="title_tutorial">Після того як ви зареєструвалися, ставши користувачі, ви маєте можливість:</string>
   <string name="message_send_poll">Відправлення результатів опитування...</string>
   <string name="message_response_sent">Відповідь надіслано успішно!</string>
   <string name="message_question_profile_picture">Ви бажаєте змінити зображення профілю?</string>
