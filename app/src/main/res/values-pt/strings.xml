@@ -319,4 +319,13 @@ Celebridades da UNICEF tem uma grande quantidade de talentos e conquistas, mas e
   <string name="title_youtube">Youtube</string>
   <string name="prompt_done">Pronto</string>
   <string name="message_upload_cancel">Seu upload foi cancelado!</string>
+  <string name="error_message_no_youtube">Você não tem o youtube instalado no seu celular. Não será possível reproduzir esse vídeo.</string>
+  <string name="label_challenge">Desafio</string>
+  <string name="label_challenge_area">Área: %1$s</string>
+  <string name="label_challenge_results">Resultados</string>
+  <string name="label_enter">Entrar</string>
+  <string name="label_issue">Problema/Questão</string>
+  <string name="label_need">Necessidade</string>
+  <string name="label_outcome">Resultado Esperado</string>
+  <string name="title_discussion_group">Grupo de discussão</string>
 </resources>

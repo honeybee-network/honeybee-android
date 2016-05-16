@@ -320,4 +320,13 @@ Las celebridades de UNICEF tienen una amplia gama de talentos y logros, pero tod
   <string name="title_youtube">Youtube</string>
   <string name="prompt_done">Hecho</string>
   <string name="message_upload_cancel">La subida fue cancelado!</string>
+  <string name="error_message_no_youtube">No es necesario que el youtube instalado en su teléfono. Será, no es posible reproducir este vídeo.</string>
+  <string name="label_challenge">Desafio</string>
+  <string name="label_challenge_area">Zona: %1$s</string>
+  <string name="label_challenge_results">Resultados</string>
+  <string name="label_enter">Entrar</string>
+  <string name="label_issue">Problema/Edición</string>
+  <string name="label_need">Necesitar</string>
+  <string name="label_outcome">Resultado Esperado</string>
+  <string name="title_discussion_group">Grupo de discusión</string>
 </resources>
