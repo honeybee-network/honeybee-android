@@ -3,12 +3,10 @@ package in.ureport.views.adapters;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.moxun.tagcloudlib.view.TagsAdapter;
 
@@ -25,7 +23,7 @@ public class PollWordsAdapter extends TagsAdapter {
     private final List<ItemKeyword> keywords;
 
     public PollWordsAdapter(List<ItemKeyword> keywords) {
-        this.keywords = keywords.subList(0, 15);
+        this.keywords = keywords.size() >= 15 ? keywords.subList(0, 15) : keywords;
     }
 
     @Override
