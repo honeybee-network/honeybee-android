@@ -129,7 +129,7 @@ U-Report é uma ferramenta grátis para participação da comunidade, modelada p
   <string name="label_chat">Chat</string>
   <string name="login_forgot_password">Esqueceu a senha?</string>
   <string name="story_item_contribute_to_story">Contribua com essa história</string>
-  <string name="list_stories_header_title">Oi %1$s, nos diga o que está acontecendo</string>
+  <string name="list_stories_header_title">Oi %1$s, compartilhe suas ideias</string>
   <string name="main_menu_group_institutional">Institucional</string>
   <string name="label_settings">Configurações</string>
   <string name="group_info_add_ureporter">Adicionar U-Reporter</string>

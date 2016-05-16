@@ -126,7 +126,7 @@ Juntxs, lxs U-Reporters pueden crear cambios positivos internacionalmente, en su
   <string name="label_chat">Chat</string>
   <string name="login_forgot_password">Olvidaste tu clave?</string>
   <string name="story_item_contribute_to_story">Contribuir a esta historia</string>
-  <string name="list_stories_header_title">Hola %1$s, cuéntanos qué está pasando</string>
+  <string name="list_stories_header_title">Hola %1$s, compartir sus ideas</string>
   <string name="main_menu_group_institutional">Institucional</string>
   <string name="label_settings">Configuración</string>
   <string name="group_info_add_ureporter">Agregar U-Reporter</string>

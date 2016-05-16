@@ -126,7 +126,7 @@
   <string name="label_chat">Чат</string>
   <string name="login_forgot_password">Забули пароль?</string>
   <string name="story_item_contribute_to_story">Додати коментар</string>
-  <string name="list_stories_header_title">Привіт %1$s, розкажи нам, що у тебе відбувається</string>
+  <string name="list_stories_header_title">Привіт %1$s, Поділіться своїми думками</string>
   <string name="main_menu_group_institutional">Установлений</string>
   <string name="label_settings">Налаштування</string>
   <string name="group_info_add_ureporter">Додати U-репортера</string>
