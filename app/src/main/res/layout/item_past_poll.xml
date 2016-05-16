@@ -14,62 +14,33 @@
         <RelativeLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:background="#f00">
-
-            <FrameLayout
-                android:id="@+id/infoBackground"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                tools:background="@color/poll_category_child">
-
-                <TextView
-                    android:id="@+id/category"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_gravity="center_vertical|start"
-                    android:textSize="16sp"
-                    android:textColor="@android:color/white"
-                    tools:text="@string/poll_category_child"/>
-
-                <TextView
-                    android:id="@+id/info"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_gravity="center_vertical|end"
-                    android:textSize="16sp"
-                    android:textColor="@android:color/white"
-                    tools:text="@string/polls_current"/>
-
-            </FrameLayout>
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/infoBackground"
                 android:maxLines="4"
                 android:ellipsize="end"
                 android:gravity="start"
                 android:textAlignment="viewStart"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:padding="10dp"
-                tools:text="@string/poll1_description"/>
+                android:layout_margin="20dp"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="In what ways can youth contribute to global?"/>
 
             <Button
                 android:id="@+id/results"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/description"
-                android:textColor="?attr/colorPrimary"
-                android:text="@string/polls_see_results"
-                android:background="@null"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/label_poll_results"
+                android:theme="@style/LightGreenButton"/>
 
         </RelativeLayout>
 

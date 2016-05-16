@@ -156,9 +156,8 @@ public class PollsResultsFragment extends Fragment implements LoaderManager.Load
 
     private void setupPolls(List<Poll> polls) {
         Collections.reverse(polls);
-        String [] pollColors = getResources().getStringArray(R.array.poll_colors);
 
-        pollsAdapter = new PollAdapter(polls, pollColors);
+        pollsAdapter = new PollAdapter(polls);
         pollsAdapter.setPollParticipationListener(pollParticipationListener);
         pollsAdapter.setCurrentPollEnabled(hasCurrentPoll);
         pollsList.setAdapter(pollsAdapter);
