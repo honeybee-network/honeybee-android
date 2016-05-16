@@ -28,7 +28,7 @@ public class AboutActivity extends AppCompatActivity {
     private static final String TWITTER_URL = "http://twitter.com/%1$s";
     private static final String FACEBOOK_URL = "https://www.facebook.com/%1$s";
 
-    private static final String ABOUT_VIDEO_ID = "g4fGB5mQ_gE";
+    private static final String ABOUT_VIDEO_ID = "JHk9YVjhk7c";
 
     private YouTubePlayerSupportFragment youtubeFragment;
 

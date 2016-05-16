@@ -110,13 +110,13 @@
     <string name="cancel_dialog_button">Cancel</string>
     <string name="label_action_notifications">Notifications</string>
     <string name="about_content">
-        U-Report is a free tool for community participation, designed to address issues that the people care about. Once you have signed up you become a U-Reporter and can Chat with other U-Reporters, submit stories and answer the weekly polls. Results and ideas are shared back with the community. Issues polled include health, education, water, sanitation and hygiene, youth unemployment, HIV/AIDS, disease outbreaks and anything else people want to discuss.
-        \n\nInformation is used to connect young people with their representatives, improve UNICEF programmes and draw attention to urgent issues with national governments and the UN. NGOs, civil society and country leaders can see the information on the site to understand what the people want or need.
-        \n\nRegistration is voluntary and U-Reporters incur no costs.
-        \n\nTogether U-Reporters create positive change in the community, the nation and internationally.
+        Honey Bee Network is a crucible of like-minded individuals, innovators, farmers, scholars, academicians, policy makers, entrepreneurs and non-governmental organizations (NGOs).
+        \n\nA Network having presence in more than seventy five countries, what has made Honey Bee Network tight knit and efficiently functional is its philosophy. Honey Bee signifies a philosophy of discourse, which is authentic, accountable and fair.
+        \n\nThe Network has been woven around three basic ideals. The Network believes that a knowledge system in order to become sustainable has to be both just and fair. Hence, while collecting knowledge from the knowledge holder, the Network has made it a norm to acknowledge the knowledge provider with name and reference, if otherwise not desired by the knowledge provider. This particular practice has come handy in protecting the IPR of the knowledge provider. In the second place, the source of knowledge i.e. in the case of Honey Bee Network, the traditional knowledge holders and grassroots innovators must be acknowledged, if otherwise desired so by the knowledge holders themselves.
+        \n\nFinally, any proceed that accrues from the value addition of local traditional knowledge and innovation; a fair and reasonable share must go back to the knowledge holders. These have been the guiding principles of the Network, which are fundamental to the functioning of the network and constitute the major non-negotiable for the Network.
     </string>
-    <string name="label_about_ureport">About U-Report</string>
-    <string name="about_subtitle">Voice\nMatters</string>
+    <string name="label_about_ureport">About Honeybee Network</string>
+    <string name="about_subtitle">Who are we?</string>
     <string name="donation_subtitle">When you make \na donation...</string>
     <string name="label_make_donation_subtitle">Make\nDonation</string>
     <string name="make_donations_content">You help UNICEF save children and transform lives by working for a more just and secure world for young people.  You can make a difference now!</string>
@@ -146,7 +146,7 @@
     <string name="points_earning_close">Close</string>
     <string name="polls_previous_title">Previous polls</string>
     <string name="switch_country_program">Switch Country Program</string>
-    <string name="about_title">About U-Report</string>
+    <string name="about_title">About Honeybee Network</string>
     <string name="label_unicef_ambassadors">Unicef Ambassadors</string>
     <string name="ambassadors_content">
         What qualifies a singer, an actor or an athlete to represent UNICEF? And what good can celebrities really do?\n

@@ -105,13 +105,13 @@
   <string name="cancel_dialog_button">Скасувати</string>
   <string name="label_action_notifications">Повідомлення</string>
   <string name="about_content">
-Ю-Репорт - це безкоштовний інструмент опитувань, призначений для вирішення проблем, що турбують молодих людей. Коли ви реєструєтесь, ви стаєте U-репортером. У додатку можна спілкуватися з іншими U-репортерами, додавати власні історії та відповідати на щотижневі опитування. Результати опитувань є загальнодоступними. Опитування включають питання охорони здоров\'я, освіти, працевлаштування молоді, ВІЛ / СНІД, і все інше, що люди хочуть обговорити.
-Інформація використовується для комунікації молодих людей, покращення програм ЮНІСЕФ та для обговорення актуальних питань з урядами, ООН та партнерами. 
-Громадські організації та представники уряду можуть користуватись інформацією на сайті, щоб зрозуміти, чого прагнуть молоді люди.
-Реєстрація є добровільною, і U-репортери не несуть ніяких витрат.
-Разом U-репортери творять позитивні зміни в суспільстві на національному та міжнародному рівні.</string>
-  <string name="label_about_ureport">Про U-Report</string>
-  <string name="about_subtitle">Думка молоді\Важлива</string>
+      Honey Bee Network is a crucible of like-minded individuals, innovators, farmers, scholars, academicians, policy makers, entrepreneurs and non-governmental organizations (NGOs).
+      \n\nA Network having presence in more than seventy five countries, what has made Honey Bee Network tight knit and efficiently functional is its philosophy. Honey Bee signifies a philosophy of discourse, which is authentic, accountable and fair.
+      \n\nThe Network has been woven around three basic ideals. The Network believes that a knowledge system in order to become sustainable has to be both just and fair. Hence, while collecting knowledge from the knowledge holder, the Network has made it a norm to acknowledge the knowledge provider with name and reference, if otherwise not desired by the knowledge provider. This particular practice has come handy in protecting the IPR of the knowledge provider. In the second place, the source of knowledge i.e. in the case of Honey Bee Network, the traditional knowledge holders and grassroots innovators must be acknowledged, if otherwise desired so by the knowledge holders themselves.
+      \n\nFinally, any proceed that accrues from the value addition of local traditional knowledge and innovation; a fair and reasonable share must go back to the knowledge holders. These have been the guiding principles of the Network, which are fundamental to the functioning of the network and constitute the major non-negotiable for the Network.
+  </string>
+  <string name="label_about_ureport">Про Honeybee Network</string>
+  <string name="about_subtitle">Хто ми?</string>
   <string name="donation_subtitle">Коли ви робите доброчинний внесок ...</string>
   <string name="label_make_donation_subtitle">Зробити внесок</string>
   <string name="make_donations_content">Ви допомагаєте ЮНІСЕФ врятувати дітей і змінити життя, працюючи над більш справедливим та безпечним світом для молодих людей. Ви можете зробити зміни вже зараз!</string>
@@ -141,7 +141,7 @@
   <string name="points_earning_close">Закрити</string>
   <string name="polls_previous_title">Попередні опитування</string>
   <string name="switch_country_program">Змінити країну програми</string>
-  <string name="about_title">Про U-Report</string>
+  <string name="about_title">Про Honeybee Network</string>
   <string name="label_unicef_ambassadors">Посли Доброї волі ЮНІСЕФ</string>
   <string name="ambassadors_content">Які музиканти, актори та спортсмени можуть представляти ЮНІСЕФ? І що корисного можуть зробити відомі люди?
 Знаменитості, що підтримують ЮНІСЕФ - талановиті та успішні, і всі вони допомагають покращувати життя дітей у всьому світі. У кожному випадку ЮНІСЕФ співпрацює саме з тими знаменитостями, які вже продемонстрували бажання допомагати дітям.</string>

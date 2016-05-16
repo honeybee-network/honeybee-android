@@ -106,12 +106,13 @@
   <string name="label_action_notifications">Notificaciones
 </string>
   <string name="about_content">
-U-Report es una herramienta gratis para la participación comunitaria, diseñada para abordar temas que le interesan a lxs jóvenes. Una vez que te registras pasas a ser un/a U-Reporter y puedes chatear con otrxs U-Reporters, contestar encuestas semanalmente, y enviar tus propias historias. Los resultados e ideas son luego compartidos con la comunidad de U-Report. Los temas de las encuestas incluyen HIV/Sida, brotes de enfermedades, paz, salud, educación, agua, higiene, empleo juvenil, y cualquiera que las personas quieran tratar. 
-La información es después usada para conectar a las personas con sus representantes, mejorar los programas de UNICEF, y llamar la atención de los gobiernos, Naciones Unidas, organizaciones de la sociedad civil y autoridades en general, sobre temas de suma urgencia. Nuestro objetivo es que ellxs usen esta información.  
-El registro es voluntario, y no hay costos asociados para lxs U-Reporters.  
-Juntxs, lxs U-Reporters pueden crear cambios positivos internacionalmente, en su país, o comunidad.</string>
-  <string name="label_about_ureport">Acerca de U-Report</string>
-  <string name="about_subtitle">Tu voz\nImporta</string>
+        Honey Bee Network is a crucible of like-minded individuals, innovators, farmers, scholars, academicians, policy makers, entrepreneurs and non-governmental organizations (NGOs).
+        \n\nA Network having presence in more than seventy five countries, what has made Honey Bee Network tight knit and efficiently functional is its philosophy. Honey Bee signifies a philosophy of discourse, which is authentic, accountable and fair.
+        \n\nThe Network has been woven around three basic ideals. The Network believes that a knowledge system in order to become sustainable has to be both just and fair. Hence, while collecting knowledge from the knowledge holder, the Network has made it a norm to acknowledge the knowledge provider with name and reference, if otherwise not desired by the knowledge provider. This particular practice has come handy in protecting the IPR of the knowledge provider. In the second place, the source of knowledge i.e. in the case of Honey Bee Network, the traditional knowledge holders and grassroots innovators must be acknowledged, if otherwise desired so by the knowledge holders themselves.
+        \n\nFinally, any proceed that accrues from the value addition of local traditional knowledge and innovation; a fair and reasonable share must go back to the knowledge holders. These have been the guiding principles of the Network, which are fundamental to the functioning of the network and constitute the major non-negotiable for the Network.
+    </string>
+  <string name="label_about_ureport">Acerca de Honeybee Network</string>
+  <string name="about_subtitle">¿Quienes somos?</string>
   <string name="donation_subtitle">Cuando haces una donación</string>
   <string name="label_make_donation_subtitle">Hacer una donación</string>
   <string name="make_donations_content">Ayudas a UNICEF a transformar y salvar la vida de niños y niñas, al trabajar por un mundo más justo y seguro para los y las jóvenes. ¡Puedes hacer una diferencia hoy!</string>
@@ -141,7 +142,7 @@ Juntxs, lxs U-Reporters pueden crear cambios positivos internacionalmente, en su
   <string name="points_earning_close">Cerrar</string>
   <string name="polls_previous_title">Encuesta previa</string>
   <string name="switch_country_program">Cambiar de país</string>
-  <string name="about_title">Acerca de U-Report</string>
+  <string name="about_title">Acerca de Honeybee Network</string>
   <string name="label_unicef_ambassadors">Embajadores de UNICEF</string>
   <string name="ambassadors_content">
 Qué califica a un cantante, actor, actriz, o deportista para representar a UNICEF? Y qué bien pueden las celebridades realmente hacer?
