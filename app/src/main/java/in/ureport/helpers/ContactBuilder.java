@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -69,6 +70,7 @@ public class ContactBuilder {
         putValuesIfExists(user.getState(), contactFields, "state", "region", "province", "county");
         putValuesIfExists(user.getDistrict(), contactFields, "location", "district", "lga");
         putValuesIfExists(countryCode, contactFields, "country");
+        putValuesIfExists(new Date(), contactFields, "created_date");
 
         contact.setFields(contactFields);
         return contact;

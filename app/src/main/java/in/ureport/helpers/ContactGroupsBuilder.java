@@ -15,11 +15,11 @@ public class ContactGroupsBuilder {
 
     private static final int YOUTH_MIN_BIRTHDAY_YEAR = 1979;
 
-    private static final String GROUP_UREPORT_YOUTH = "UReport Youth";
-    private static final String GROUP_UREPORT_ADULTS = "UReport Adults";
-    private static final String GROUP_UREPORT_MALES = "UReport Males";
-    private static final String GROUP_UREPORT_FEMALES = "UReport Females";
-    private static final String GROUP_UREPORT_APP = "App U-Reporters";
+    private static final String GROUP_UREPORT_YOUTH = "Honeybee Youth";
+    private static final String GROUP_UREPORT_ADULTS = "Honeybee Adults";
+    private static final String GROUP_UREPORT_MALES = "Honeybee Males";
+    private static final String GROUP_UREPORT_FEMALES = "Honeybee Females";
+    private static final String GROUP_UREPORT_APP = "App Honeybee";
 
     public List<String> getGroupsForUser(User user) {
         List<String> userGroups = new ArrayList<>();
