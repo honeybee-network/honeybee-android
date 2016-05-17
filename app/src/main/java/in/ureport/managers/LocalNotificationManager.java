@@ -128,12 +128,12 @@ public class LocalNotificationManager {
     }
 
     private NotificationCompat.Builder getDefaultNotificationBuilder(String title, String message, PendingIntent pendingIntent) {
-        Bitmap largeIcon = BitmapFactory.decodeResource(context.getResources(), R.drawable.icon_notification);
+        Bitmap largeIcon = BitmapFactory.decodeResource(context.getResources(), R.drawable.img_logo);
         Uri soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
 
         return new NotificationCompat.Builder(context)
                 .setContentTitle(title)
-                .setSmallIcon(R.drawable.icon_notification)
+                .setSmallIcon(R.drawable.img_logo)
                 .setContentText(message)
                 .setLargeIcon(largeIcon)
                 .setContentIntent(pendingIntent)

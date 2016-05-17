@@ -7,13 +7,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import in.ureport.R;
 import in.ureport.models.Poll;
-import in.ureport.models.PollCategory;
 
 /**
  * Created by johncordeiro on 7/16/15.
@@ -71,6 +68,10 @@ public class PollAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public void setCurrentPollEnabled(boolean currentPollEnabled) {
         this.currentPollEnabled = currentPollEnabled;
         notifyDataSetChanged();
+    }
+
+    public void removePoll(Poll poll) {
+        this.polls.remove(poll);
     }
 
     @Override

@@ -59,6 +59,7 @@ public class PollsResultsFragment extends Fragment implements LoaderManager.Load
     private ProgressBar progressBar;
     private TextView title;
     private TextView subtitle;
+    private TextView moreDetails;
     private NestedScrollView scrollView;
 
     private PollServices pollServices;
@@ -67,6 +68,7 @@ public class PollsResultsFragment extends Fragment implements LoaderManager.Load
     private PollAdapter.PollParticipationListener pollParticipationListener;
 
     private boolean hasCurrentPoll = false;
+    private Poll currentPoll;
 
     @Nullable
     @Override
@@ -152,6 +154,13 @@ public class PollsResultsFragment extends Fragment implements LoaderManager.Load
         progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
         title = (TextView) view.findViewById(R.id.title);
         subtitle = (TextView) view.findViewById(R.id.subtitle);
+
+        moreDetails = (TextView) view.findViewById(R.id.moreDetails);
+        moreDetails.setOnClickListener(view1 -> {
+            if(currentPoll != null) {
+                pollParticipationListener.onSeeResults(currentPoll);
+            }
+        });
     }
 
     private void setupPolls(List<Poll> polls) {
@@ -167,7 +176,10 @@ public class PollsResultsFragment extends Fragment implements LoaderManager.Load
         try {
             Poll poll = snapshot.getValue(Poll.class);
             poll.setKey(snapshot.getKey());
-            polls.add(poll);
+
+            if(currentPoll == null || !poll.equals(currentPoll)) {
+                polls.add(poll);
+            }
         } catch(Exception exception) {
             Log.e(TAG, "onDataChange ", exception);
         }
@@ -218,6 +230,7 @@ public class PollsResultsFragment extends Fragment implements LoaderManager.Load
     }
 
     private void addFlowDefinition(final FlowDefinition flowDefinition) {
+        pollServices.getPollInformation(flowDefinition.getMetadata().getUuid(), onCurrentPollLoadedListener);
         setCurrentPollExistance(true);
         progressBar.post(() -> {
             FlowFragment flowFragment = FlowFragment.newInstance(flowDefinition, UserManager.getUserLanguage(), R.layout.view_button_flows);
@@ -272,6 +285,23 @@ public class PollsResultsFragment extends Fragment implements LoaderManager.Load
             String type = intent.getStringExtra(NotificationTask.EXTRA_TYPE);
             if(type != null && type.equals(MessageNotificationTask.NEW_MESSAGE_TYPE)) {
                 loadLastFlow(true);
+            }
+        }
+    };
+
+    private ValueEventListenerAdapter onCurrentPollLoadedListener = new ValueEventListenerAdapter() {
+        @Override
+        public void onDataChange(DataSnapshot dataSnapshot) {
+            super.onDataChange(dataSnapshot);
+            if(dataSnapshot.exists()) {
+                DataSnapshot itemSnapshot = dataSnapshot.getChildren().iterator().next();
+                currentPoll = itemSnapshot.getValue(Poll.class);
+                currentPoll.setKey(itemSnapshot.getKey());
+
+                pollsAdapter.removePoll(currentPoll);
+                moreDetails.setVisibility(View.VISIBLE);
+            } else {
+                moreDetails.setVisibility(View.GONE);
             }
         }
     };

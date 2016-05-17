@@ -26,6 +26,11 @@ public class PollServices extends ProgramServices {
         return getDefaultRoot().child(pollPath).orderByKey();
     }
 
+    public void getPollInformation(String flowUuid, ValueEventListener listener) {
+        getDefaultRoot().child(pollPath)
+                .orderByChild("flow_uuid").equalTo(flowUuid).addValueEventListener(listener);
+    }
+
     public void getPollResults(Poll poll, ValueEventListener listener) {
         getPollsResultsQuery(poll).addValueEventListener(listener);
     }

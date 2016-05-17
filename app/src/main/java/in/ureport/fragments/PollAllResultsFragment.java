@@ -3,7 +3,6 @@ package in.ureport.fragments;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.BottomSheetBehavior;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.firebase.client.DataSnapshot;
 
@@ -44,9 +44,9 @@ public class PollAllResultsFragment extends Fragment {
 
     private RecyclerView resultsList;
     private ProgressBar progressBar;
+    private TextView errorMessage;
 
     private PollServices pollServices;
-    private BottomSheetBehavior<View> bottomSheetBehavior;
 
     public static PollAllResultsFragment newInstance(Poll poll) {
         PollAllResultsFragment pollAllResultsFragment = new PollAllResultsFragment();
@@ -92,11 +92,10 @@ public class PollAllResultsFragment extends Fragment {
     }
 
     private void setupView(View view) {
+        errorMessage = (TextView) view.findViewById(R.id.errorMessage);
+
         resultsList = (RecyclerView) view.findViewById(R.id.resultsList);
         progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
-
-        Button comment = (Button) view.findViewById(R.id.comment);
-        comment.setOnClickListener(v -> PollsResultsContributionsDialog.newInstance(poll).show(getFragmentManager(), "dialog"));
     }
 
     private float getHeight(int percent) {
@@ -119,6 +118,7 @@ public class PollAllResultsFragment extends Fragment {
             resultsList.setLayoutManager(new LinearLayoutManager(getContext()));
         }
         resultsList.setAdapter(pollResultsAdapter);
+        errorMessage.setVisibility(pollResults.isEmpty() ? View.VISIBLE : View.GONE);
     }
 
     private void addPollResultIfPossible(List<PollResult> pollResults, DataSnapshot snapshot) {
