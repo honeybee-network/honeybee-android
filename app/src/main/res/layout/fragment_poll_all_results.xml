@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -19,26 +19,16 @@
             android:paddingBottom="70dp"
             android:clipToPadding="false"/>
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_alignParentBottom="true"
-            android:background="@android:color/white"
-            android:elevation="10dp">
-
-            <Button
-                android:id="@+id/comment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_gravity="center"
-                android:textAllCaps="false"
-                android:textSize="18sp"
-                android:text="@string/title_comment"
-                android:theme="@style/GreenButton" />
-
-        </FrameLayout>
+        <TextView
+            android:id="@+id/errorMessage"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:textSize="20sp"
+            android:text="@string/message_no_result"
+            tools:visibility="visible"/>
 
         <ProgressBar
             android:id="@+id/progressBar"
