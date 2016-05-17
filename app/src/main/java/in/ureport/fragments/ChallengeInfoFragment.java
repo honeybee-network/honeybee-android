@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -79,7 +80,12 @@ public class ChallengeInfoFragment extends Fragment {
         title.setText(poll.getTitle());
 
         TextView category = (TextView) view.findViewById(R.id.category);
-        category.setText(getString(R.string.label_challenge_area, poll.getCategory().getName()));
+        if(poll.getCategory() != null && poll.getCategory().getName() != null) {
+            category.setVisibility(View.VISIBLE);
+            category.setText(getString(R.string.label_challenge_area, poll.getCategory().getName()));
+        } else {
+            category.setVisibility(View.GONE);
+        }
 
         View issue = view.findViewById(R.id.issue);
         setupChallengeDetailRow(issue, getString(R.string.label_issue), poll.getIssue(), true);
@@ -94,11 +100,13 @@ public class ChallengeInfoFragment extends Fragment {
         enterChat.setOnClickListener(onEnterChatClickListener);
     }
 
-    private void setupChallengeDetailRow(View issue, String title, String content, boolean enabled) {
-        final TextView rowContent = (TextView) issue.findViewById(R.id.content);
+    private void setupChallengeDetailRow(View parent, String title, String content, boolean enabled) {
+        parent.setVisibility(TextUtils.isEmpty(content) ? View.GONE : View.VISIBLE);
+
+        final TextView rowContent = (TextView) parent.findViewById(R.id.content);
         rowContent.setText(content);
 
-        final TextView rowTitle = (TextView) issue.findViewById(R.id.title);
+        final TextView rowTitle = (TextView) parent.findViewById(R.id.title);
         rowTitle.setText(title);
         rowTitle.setOnClickListener(view1 -> toggleRowContent(rowContent, rowTitle));
 
