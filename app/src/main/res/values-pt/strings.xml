@@ -53,7 +53,7 @@
   <string name="story_view_contribute">Contribua com essa história</string>
   <string name="story_contribution_add">Adicione uma contribuição</string>
   <string name="polls_participate">Resposta</string>
-  <string name="polls_current">Enquete atual</string>
+  <string name="polls_current">Desafio atual</string>
   <string name="polls_responded_info">%1$s respondidos de %2$s enviados</string>
   <string name="polls_response_rate">%1$s%% taxa de resposta</string>
   <string name="polls_see_results">Veja os resultados</string>

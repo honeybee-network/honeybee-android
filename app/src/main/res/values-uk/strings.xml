@@ -53,7 +53,7 @@
   <string name="story_view_contribute">Коментувати</string>
   <string name="story_contribution_add">Додати коментар</string>
   <string name="polls_participate">Відповідь</string>
-  <string name="polls_current">Актуальне опитування</string>
+  <string name="polls_current">зараз завдання</string>
   <string name="polls_responded_info">%1$s відповіли з %2$s опитуваних</string>
   <string name="polls_response_rate">%1$s%% рівень активності</string>
   <string name="polls_see_results">Дивитись результати</string>

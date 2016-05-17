@@ -220,7 +220,7 @@ public class PollsResultsFragment extends Fragment implements LoaderManager.Load
     private void addFlowDefinition(final FlowDefinition flowDefinition) {
         setCurrentPollExistance(true);
         progressBar.post(() -> {
-            FlowFragment flowFragment = FlowFragment.newInstance(flowDefinition, UserManager.getUserLanguage());
+            FlowFragment flowFragment = FlowFragment.newInstance(flowDefinition, UserManager.getUserLanguage(), R.layout.view_button_flows);
             flowFragment.setFlowListener(PollsResultsFragment.this);
             getFragmentManager().beginTransaction()
                     .replace(R.id.topBar, flowFragment)
