@@ -68,7 +68,7 @@ public class CountryProgramManager {
     public static List<CountryProgram> getAvailableCountryPrograms() {
         if(countryPrograms == null) {
             countryPrograms = new ArrayList<>();
-            countryPrograms.add(buildCountryProgram("GLOBAL", R.style.AppTheme, R.string.proxy_url, "Honeybee Network", INVALID_VALUE
+            countryPrograms.add(buildCountryProgram("IND", R.style.AppTheme, R.string.rapidpro_channel, "Honeybee Network", INVALID_VALUE
                     , rapidpro_host_address1, R.string.proxy_url, "honeybeenetwork", "honeybee.nitw", null));
         }
         return countryPrograms;
