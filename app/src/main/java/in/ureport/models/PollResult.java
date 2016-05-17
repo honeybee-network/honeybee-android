@@ -16,7 +16,7 @@ public abstract class PollResult implements Parcelable {
         Keywords
     }
 
-    private Integer id;
+    private String id;
 
     private String date;
 
@@ -36,11 +36,11 @@ public abstract class PollResult implements Parcelable {
         this.title = title;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -83,7 +83,7 @@ public abstract class PollResult implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeValue(this.id);
+        dest.writeString(this.id);
         dest.writeString(this.date);
         dest.writeString(this.responded);
         dest.writeString(this.polled);
@@ -95,7 +95,7 @@ public abstract class PollResult implements Parcelable {
     }
 
     protected PollResult(Parcel in) {
-        this.id = (Integer) in.readValue(Integer.class.getClassLoader());
+        this.id = in.readString();
         this.date = in.readString();
         this.responded = in.readString();
         this.polled = in.readString();
