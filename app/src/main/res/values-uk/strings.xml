@@ -218,8 +218,8 @@
   <string name="poll_response_hint">Натисніть тут, щоб відповісти</string>
   <string name="poll_question_default_message">Чекайте наступного опитування або надішліть повідомлення для U-Report нижче</string>
   <string name="main_chat">Чат</string>
-  <string name="title_open_groups">Приєднуйтесь до груп</string>
-  <string name="description_open_groups">Дивитись, що Honeybee Network спільнота обговорює</string>
+  <string name="title_open_groups">вступити в групи</string>
+  <string name="description_open_groups">Отримати консультацію та підтримку з боку наших інноваційних експертів</string>
   <string name="title_see">Дивитись</string>
   <string name="label_invite_contacts">Запросити контакти</string>
   <string name="title_poll_question_no_login">Увійдіть у свій обліковий запис, щоб відповісти на опитування</string>

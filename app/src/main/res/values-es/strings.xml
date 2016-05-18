@@ -227,8 +227,8 @@ Las celebridades de UNICEF tienen una amplia gama de talentos y logros, pero tod
   <string name="poll_response_hint">Haz click acá para responder</string>
   <string name="poll_question_default_message">Esperar a próxima encuesta o enviar mensaje a U-Report más abajo.</string>
   <string name="main_chat">Chat</string>
-  <string name="title_open_groups">Seguir grupos</string>
-  <string name="description_open_groups">Ver lo que las comunidades de Honeybee Network están hablando</string>
+  <string name="title_open_groups">Unirse a Grupos</string>
+  <string name="description_open_groups">Recibe consejos y el apoyo de nuestros expertos en innovación</string>
   <string name="title_see">Ver</string>
   <string name="label_invite_contacts">Invitar contactos</string>
   <string name="title_poll_question_no_login">Necesitas registrarte para contestar encuestas</string>
