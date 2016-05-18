@@ -71,7 +71,7 @@ public class TutorialActivity extends AppCompatActivity {
         List<Tutorial> tutorialList = new ArrayList<>();
         tutorialList.add(new Tutorial(getString(R.string.tutorial_title1)
                                     , getString(R.string.tutorial_description1)
-                                    , R.drawable.tutorial_item1g
+                                    , R.drawable.tutorial_item1
                                     , R.color.primary_color));
 
         tutorialList.add(new Tutorial(getString(R.string.tutorial_title2)
