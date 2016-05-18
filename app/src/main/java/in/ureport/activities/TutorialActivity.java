@@ -1,5 +1,6 @@
 package in.ureport.activities;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.view.ViewPager;
@@ -17,6 +18,7 @@ import in.ureport.R;
 import in.ureport.models.holders.Tutorial;
 import in.ureport.pref.SystemPreferences;
 import in.ureport.views.adapters.TutorialAdapter;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
  * Created by johncordeiro on 05/10/15.
@@ -29,6 +31,11 @@ public class TutorialActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tutorial);
         setupView();
         setupTutorialView();
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     private void setupTutorialView() {
@@ -64,18 +71,18 @@ public class TutorialActivity extends AppCompatActivity {
         List<Tutorial> tutorialList = new ArrayList<>();
         tutorialList.add(new Tutorial(getString(R.string.tutorial_title1)
                                     , getString(R.string.tutorial_description1)
-                                    , R.drawable.tutorial_item1
-                                    , R.color.tutorial_background1));
+                                    , R.drawable.tutorial_item1g
+                                    , R.color.primary_color));
 
         tutorialList.add(new Tutorial(getString(R.string.tutorial_title2)
                                     , getString(R.string.tutorial_description2)
                                     , R.drawable.tutorial_item2
-                                    , R.color.tutorial_background2));
+                                    , R.color.primary_color));
 
         tutorialList.add(new Tutorial(getString(R.string.tutorial_title3)
                                     , getString(R.string.tutorial_description3)
                                     , R.drawable.tutorial_item3
-                                    , R.color.tutorial_background3));
+                                    , R.color.primary_color));
 
         return tutorialList;
     }
