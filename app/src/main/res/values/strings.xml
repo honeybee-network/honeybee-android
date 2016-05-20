@@ -358,6 +358,8 @@
     <string name="label_enter">Enter</string>
     <string name="message_discussion_group">See what users are saying about this challenge</string>
     <string name="message_no_result">There is no result to this challenge yet</string>
+    <string name="label_web_moderation">Web Moderation</string>
+    <string name="message_authentication_started">Authentication started successfully</string>
 
     <plurals name="files_attached">
         <item quantity="one">%1$s file attached</item>
